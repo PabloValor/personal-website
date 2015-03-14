@@ -28,9 +28,11 @@ app.use(function(req, res, next){
 });
 
 /*	Routes	*/
+
 app.get('/', function(req, res){
 	res.render('layout', {
 			headerTitle: req.i18n.__('headerTitle'),
+			headerQuote: req.i18n.__('headerQuote'),
 			headerText: req.i18n.__('headerText')
 		});
 });

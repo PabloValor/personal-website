@@ -5,12 +5,15 @@
 	<title>Personal website</title>
 </head>
 <body>
-	<h1>Pablo valor</h1>
-	<h2>{{__(headerTitle) }}</h2>
-	<a href="?lang=es">Español </a>
-	<a href="?lang=en">English</a>
-	<hr>
-	<p>{{__(headerText)}}</p>
+	{% include "partials/menu.html" %}
+	{% include "partials/header.html" %}
+
+	{% include "partials/section-1.html" %}
+	{% include "partials/section-2.html" %}
+	{% include "partials/section-3.html" %}
+
+	{% include "partials/footer.html" %}
+	
 	
 </body>
 </html>
