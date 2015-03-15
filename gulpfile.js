@@ -50,11 +50,13 @@ gulp.task('less', function() {
 		.pipe(refresh());
 });
 
+
+refresh.listen({start: true});
+
 gulp.task('watch', function() {
-	refresh.listen({start: true});
-	
+
 	gulp.watch(paths.styles.src + '*.less', ['less']);
 	
 });
 
-gulp.task('default', ['less']);
+gulp.task('default', ['watch','less']);

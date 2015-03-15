@@ -3,7 +3,7 @@ var express				=		require('express'),
 	swig				=		require('swig'),
 	cookieParser		=		require('cookie-parser'),
 	i18n				=		require('i18n-2'),
-	PORT				= 		process.env.PORT || 5050;
+	PORT				= 		process.env.PORT || 6060;
 
 /*	View Engine Setup	*/
 app.engine('html', swig.renderFile);
