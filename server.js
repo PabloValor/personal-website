@@ -10,6 +10,9 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 
 /*	Set static files path	*/
+app.use(express.static(__dirname + '/app/public/'));
+
+/*	Set views path	*/
 app.set('views', __dirname + '/app/views/');
 
 
