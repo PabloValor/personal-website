@@ -6,7 +6,12 @@
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	
-	<link rel="stylesheet" type="text/css" href="styles/main.min.css">
+	{% if isProduction %}
+		<link rel="stylesheet" type="text/css" href="styles/main.min.css">
+	{% else %}
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+	{% endif %}
+	
 </head>
 <body>
 	{% include "partials/menu.html" %}

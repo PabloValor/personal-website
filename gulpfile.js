@@ -9,6 +9,15 @@ var gulp 			= require('gulp'),
 	minifyCSS 		= require('gulp-minify-css'),
 	autoprefixer 	= require('gulp-autoprefixer');
 
+/*		Enviroment Setup		*/
+var isProduction = true;
+
+	// Getting the current enviroment
+if(gutil.env.dev === true) {
+	isProduction = false;
+	console.log('App running on Development enviroment...');
+}
+
 /*	Configure Paths 	*/
 var basePaths = {
 	src: './app/public/',
@@ -44,8 +53,8 @@ gulp.task('less', function() {
             cascade: false
         	}
         ))		
-		.pipe(minifyCSS({keepSpecialComments: 0}))
-		.pipe(rename({suffix: '.min'}))
+		.pipe(isProduction ? minifyCSS({keepSpecialComments: 0}) : gutil.noop())
+		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(refresh());
 });
