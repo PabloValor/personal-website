@@ -15,7 +15,7 @@ var isProduction = true;
 	// Getting the current enviroment
 if(gutil.env.dev === true) {
 	isProduction = false;
-	console.log('App running on Development enviroment...');
+	console.log('Gulp tasks running on development enviroment...');
 }
 
 /*	Configure Paths 	*/
@@ -64,7 +64,8 @@ refresh.listen({start: true});
 
 gulp.task('watch', function() {
 
-	gulp.watch(paths.styles.src + '*.less', ['less']);
+	gulp.watch(paths.styles.src + '**/*.less', ['less']);
+	console.log('Waiting...');
 	
 });
 

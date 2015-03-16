@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Personal website</title>
 
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	
 	{% if isProduction %}
 		<link rel="stylesheet" type="text/css" href="styles/main.min.css">
@@ -14,7 +16,6 @@
 	
 </head>
 <body>
-	{% include "partials/menu.html" %}
 	{% include "partials/header.html" %}
 
 	{% include "partials/section-1.html" %}
@@ -22,7 +23,5 @@
 	{% include "partials/section-3.html" %}
 
 	{% include "partials/footer.html" %}
-	
-	
 </body>
 </html>

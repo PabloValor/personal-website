@@ -1164,12 +1164,66 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 100%;
   }
 }
+/*		Colors 		*/
 /* Include rules for common elements: body, a, ul, li, ... */
+div,
+section {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a,
+p {
+  letter-spacing: .1em;
+}
+a {
+  color: #599bdd;
+  text-decoration: none;
+}
+a.is-external {
+  color: green;
+}
 body {
-  background: #CCC;
+  background: #f1f1f1;
   font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 section {
-  color: red;
-  border: 1px solid white;
+  position: relative;
+}
+/*		Colors 		*/
+/*		Images Paths 	*/
+header {
+  background-image: url('../../images/bg-header.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  height: 600px;
+}
+header h2 {
+  color: white;
+  font-size: 5em;
+  text-align: center;
+  margin: 0 auto;
+}
+footer {
+  background: lightblue;
+}
+section .wrapper {
+  padding: 2em 1em;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+section .section-title {
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+.section-1 {
+  background: tomato;
+}
+.section-2 {
+  background: crimson;
+}
+.section-3 {
+  background: blueviolet;
 }
