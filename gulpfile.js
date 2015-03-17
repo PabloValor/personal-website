@@ -30,8 +30,8 @@ var paths = {
 		dest: basePaths.dest + 'images/min/',
 	},
 	scripts: {
-		src: basePaths.src + 'js/',
-		dest: basePaths.dest + 'js/',
+		src: basePaths.src + 'scripts/',
+		dest: basePaths.dest + 'scripts/',
 	},
 	styles: {
 		src: basePaths.src + 'styles/',
@@ -59,14 +59,25 @@ gulp.task('less', function() {
 		.pipe(refresh());
 });
 
+/* JS task*/
+gulp.task('javascript', function(){
+	gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'main.js'])
+		.pipe(concat('main.js'))
+		.pipe(isProduction ? uglify() : gutil.noop())
+		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
+		.pipe(gulp.dest(paths.scripts.dest))
+		.on('error',gutil.log)
+		.pipe(refresh());
+});
+
 
 refresh.listen({start: true});
 
 gulp.task('watch', function() {
 
 	gulp.watch(paths.styles.src + '**/*.less', ['less']);
-	console.log('Waiting...');
+	gulp.watch(paths.scripts.src + '*.js', ['javascript']);
 	
 });
 
-gulp.task('default', ['watch','less']);
+gulp.task('default', ['watch','less', 'javascript']);

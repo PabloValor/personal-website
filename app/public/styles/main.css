@@ -1165,6 +1165,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   }
 }
 /*		Colors 		*/
+/*		Images Paths 	*/
 /* Include rules for common elements: body, a, ul, li, ... */
 div,
 section {
@@ -1190,15 +1191,12 @@ body {
 section {
   position: relative;
 }
-/*		Colors 		*/
-/*		Images Paths 	*/
 header {
   background-image: url('../../images/bg-header.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-  height: 600px;
 }
 header h2 {
   color: white;
