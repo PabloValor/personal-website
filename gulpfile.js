@@ -57,6 +57,8 @@ gulp.task('less', function() {
 		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(refresh());
+
+		gutil.log(gutil.colors.bgGreen.bold('CSS ready!'));
 });
 
 /* JS task*/
@@ -68,6 +70,8 @@ gulp.task('javascript', function(){
 		.pipe(gulp.dest(paths.scripts.dest))
 		.on('error',gutil.log)
 		.pipe(refresh());
+
+		gutil.log(gutil.colors.bgGreen.bold('Javascript ready!'));
 });
 
 
@@ -77,7 +81,6 @@ gulp.task('watch', function() {
 
 	gulp.watch(paths.styles.src + '**/*.less', ['less']);
 	gulp.watch(paths.scripts.src + '*.js', ['javascript']);
-	
 });
 
 gulp.task('default', ['watch','less', 'javascript']);
