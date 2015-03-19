@@ -2999,13 +2999,14 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   content: "\f23a";
 }
 /*		Colors 		*/
+/* Colors nomenclature usage  */
+/*
+	Each color has a number that correspond with it lightness or hardness.
+	For instance, @color-gray-1 it would has more light than @color-gray-5
+
+*/
 /*		Images Paths 	*/
 /* Include rules for common elements: body, a, ul, li, ... */
-div,
-section {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 a,
 p {
   letter-spacing: .1em;
@@ -3018,9 +3019,17 @@ a.is-external {
   color: green;
 }
 body {
-  background: #f1f1f1;
+  background: white;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
+}
+div,
+section {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h3 {
+  font-size: 1.3em;
 }
 section {
   position: relative;
@@ -3050,12 +3059,29 @@ section .section-title {
   text-align: center;
   padding-bottom: 1.5em;
 }
-.section-1 {
-  background: tomato;
+.three-col-section ._box {
+  border: 1px solid #cccccc;
+  margin: 0 .5em;
+  padding: 0 1em;
 }
 .section-2 {
   background: crimson;
 }
 .section-3 {
   background: blueviolet;
+}
+.util-content-center {
+  text-align: center;
+}
+.util-content-left {
+  text-align: left;
+}
+.util-content-right {
+  text-align: right;
+}
+.util-without-margin-bottom {
+  margin-bottom: 0;
+}
+.util-without-margin-top {
+  margin-top: 0;
 }
