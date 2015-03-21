@@ -7641,6 +7641,133 @@ Copyright (c) 2015 Daniel Eden
 
 */
 /* 	pallete from http://flatuicolors.com/	*/
+/* 		Utilities Classes 	*/
+.bg-turquoise {
+  background: #1abc9c;
+}
+.bg-esmerald {
+  background: #2ecc71;
+}
+.bg-peter-river {
+  background: #3498db;
+}
+.bg-amethyst {
+  background: #9b59b6;
+}
+.bg-wet-asphalt {
+  background: #34495e;
+}
+.bg-green-sea {
+  background: #16a085;
+}
+.bg-nephritis {
+  background: #27ae60;
+}
+.bg-belize-hole {
+  background: #2980b9;
+}
+.bg-wisteria {
+  background: #8e44ad;
+}
+.bg-midnight-blue {
+  background: #2c3e50;
+}
+.bg-midnight-blue {
+  background: #2c3e50;
+}
+.bg-sun-flower {
+  background: #f1c40f;
+}
+.bg-carrot {
+  background: #e67e22;
+}
+.bg-alizarin {
+  background: #e74c3c;
+}
+.bg-clouds {
+  background: #ecf0f1;
+}
+.bg-concrete {
+  background: #95a5a6;
+}
+.bg-orange {
+  background: #f39c12;
+}
+.bg-pumpkin {
+  background: #d35400;
+}
+.bg-pomegranate {
+  background: #c0392b;
+}
+.bg-silver {
+  background: #bdc3c7;
+}
+.bg-asbestos {
+  background: #7f8c8d;
+}
+.color-turquoise {
+  color: #1abc9c;
+}
+.color-esmerald {
+  color: #2ecc71;
+}
+.color-peter-river {
+  color: #3498db;
+}
+.color-amethyst {
+  color: #9b59b6;
+}
+.color-wet-asphalt {
+  color: #34495e;
+}
+.color-green-sea {
+  color: #16a085;
+}
+.color-nephritis {
+  color: #27ae60;
+}
+.color-belize-hole {
+  color: #2980b9;
+}
+.color-wisteria {
+  color: #8e44ad;
+}
+.color-midnight-blue {
+  color: #2c3e50;
+}
+.color-midnight-blue {
+  color: #2c3e50;
+}
+.color-sun-flower {
+  color: #f1c40f;
+}
+.color-carrot {
+  color: #e67e22;
+}
+.color-alizarin {
+  color: #e74c3c;
+}
+.color-clouds {
+  color: #ecf0f1;
+}
+.color-concrete {
+  color: #95a5a6;
+}
+.color-orange {
+  color: #f39c12;
+}
+.color-pumpkin {
+  color: #d35400;
+}
+.color-pomegranate {
+  color: #c0392b;
+}
+.color-silver {
+  color: #bdc3c7;
+}
+.color-asbestos {
+  color: #7f8c8d;
+}
 /*		Images Paths 	*/
 /* Include rules for common elements: body, a, ul, li, ... */
 a,
@@ -7688,7 +7815,7 @@ header .arrow {
   font-size: 3em;
   position: absolute;
   left: 50%;
-  bottom: .5em;
+  bottom: .1em;
 }
 footer {
   background: #2c3e50;
@@ -7711,7 +7838,6 @@ section .section-title {
   padding: 0 1em;
 }
 .three-col-features ._box ._body ._img i {
-  background: tomato;
   border-radius: 100%;
   padding: .3em;
   font-size: 5em;
