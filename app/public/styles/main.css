@@ -3059,16 +3059,28 @@ section .section-title {
   text-align: center;
   padding-bottom: 1.5em;
 }
-.three-col-section ._box {
+.three-col-features {
+  background: lightyellow;
+}
+.three-col-features ._box {
   border: 1px solid #cccccc;
   margin: 0 .5em;
   padding: 0 1em;
 }
-.section-2 {
+.three-col-features ._box ._body ._img i {
+  background: tomato;
+  border-radius: 100%;
+  padding: .3em;
+  font-size: 5em;
+}
+.title-image-text {
+  background: gold;
+}
+.title-text {
   background: crimson;
 }
-.section-3 {
-  background: blueviolet;
+.videoBG-text {
+  background: lightgreen;
 }
 .util-content-center {
   text-align: center;
