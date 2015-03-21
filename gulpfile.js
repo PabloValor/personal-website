@@ -7,6 +7,8 @@ var gulp 			= require('gulp'),
 	rename 			= require('gulp-rename'),
 	imagemin 		= require('gulp-imagemin'),
 	minifyCSS 		= require('gulp-minify-css'),
+	jshint			= require('gulp-jshint'),
+	stylish 		= require('jshint-stylish'),
 	autoprefixer 	= require('gulp-autoprefixer');
 
 /*		Enviroment Setup		*/
@@ -74,13 +76,20 @@ gulp.task('javascript', function(){
 		gutil.log(gutil.colors.bgGreen.bold('Javascript ready!'));
 });
 
+/* 	Jshint task	*/
+gulp.task('lint', function() {
+  return gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'main.js'])
+	    .pipe(jshint())
+	    .pipe(jshint.reporter(stylish));
+});
+
 
 refresh.listen({start: true});
 
 gulp.task('watch', function() {
 
 	gulp.watch(paths.styles.src + '**/*.less', ['less']);
-	gulp.watch(paths.scripts.src + '*.js', ['javascript']);
+	gulp.watch(paths.scripts.src + '*.js', ['javascript', 'lint']);
 });
 
-gulp.task('default', ['watch','less', 'javascript']);
+gulp.task('default', ['watch','less', 'javascript', 'lint']);

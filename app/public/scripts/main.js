@@ -1,7 +1,6 @@
-"use strict";
-
 $(document).on('ready', function() {
-	
+	"use strict";
+		
 	var $header = $('#header');
 
 	//Set $header height related the viewport height
@@ -9,5 +8,3 @@ $(document).on('ready', function() {
 
 	console.log('ready :)');	
 });
-
-
