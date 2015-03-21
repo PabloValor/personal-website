@@ -3005,6 +3005,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 	For instance, @color-gray-1 it would has more light than @color-gray-5
 
 */
+/* 	pallete from http://flatuicolors.com/	*/
 /*		Images Paths 	*/
 /* Include rules for common elements: body, a, ul, li, ... */
 a,
@@ -3047,8 +3048,12 @@ header h2 {
   text-align: center;
   margin: 0 auto;
 }
+header .arrow {
+  color: white;
+  font-size: 3em;
+}
 footer {
-  background: lightblue;
+  background: #2c3e50;
 }
 section .wrapper {
   padding: 2em 1em;
