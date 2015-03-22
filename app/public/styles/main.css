@@ -7817,6 +7817,8 @@ header {
 header h2 {
   color: white;
   font-size: 5em;
+  margin-left: .2em;
+  margin-right: .2em;
 }
 header .arrow {
   -webkit-animation-name: upAndDown;
