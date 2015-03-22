@@ -16,6 +16,6 @@ $(document).on('ready', function() {
 			scrollTop: $header.height()
 		}, 1500);
 	});
-	
+
 	console.log('ready :)');	
 });
