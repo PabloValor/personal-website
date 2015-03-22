@@ -66,7 +66,7 @@ gulp.task('less', function() {
 /* JS task*/
 gulp.task('javascript', function(){
 	gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'main.js'])
-		.pipe(concat('main.js'))
+		.pipe(concat('main-script.js'))
 		.pipe(isProduction ? uglify() : gutil.noop())
 		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
 		.pipe(gulp.dest(paths.scripts.dest))
@@ -78,7 +78,7 @@ gulp.task('javascript', function(){
 
 /* 	Jslint task	*/
 gulp.task('lint', function() {
-  return gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'main.js'])
+  return gulp.src(paths.scripts.src + 'main.js')
 	    .pipe(jshint())
 	    .pipe(jshint.reporter(stylish));
 });

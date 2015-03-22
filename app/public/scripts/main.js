@@ -17,5 +17,10 @@ $(document).on('ready', function() {
 		}, 1500);
 	});
 
+	//video bg
+	$('.player').mb_YTPlayer();
+
+	
+
 	console.log('ready :)');	
 });
