@@ -3,20 +3,19 @@ $(document).on('ready', function() {
 		
 	var $header 		= $('#header'),
 		$arrowHeader 	= $('#arrow'),
-		headerHeight; 
+		$sections		= $('section'); 
 
 	//Set $header height related the viewport height
 	$header.height($(window).height());
-	headerHeight = $header.height();
 
 	//arrow header event
 	$arrowHeader.on('click', function(event) {
 		event.preventDefault();
 
 		$('html, body').animate({
-			scrollTop: headerHeight
+			scrollTop: $header.height()
 		}, 1500);
 	});
-
+	
 	console.log('ready :)');	
 });

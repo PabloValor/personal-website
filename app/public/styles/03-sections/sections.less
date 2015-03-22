@@ -2,7 +2,7 @@
 
 section {
 	.wrapper {
-		padding: 2em 1em;
+		padding: 3em 1em;
 		margin: 0 auto;
 		max-width: 1024px;
 	}
@@ -11,5 +11,22 @@ section {
 		padding-bottom: 1.5em;
 	}
 	.section-body {
+	}
+
+	 /* By default, each panel has a white triangle.
+	 	Each section file must overwrite the color by it bg color.
+	 */
+	&:after {
+		border-top: 2em solid white;
+		border-left: 2em solid transparent;
+		border-right: 2em solid transparent;
+		content: "";
+		display: inline-block;
+		left: 50%;
+		margin-left: -2em;
+		height: 0;
+		width: 0;
+		position: absolute;
+		z-index: 1;
 	}
 }

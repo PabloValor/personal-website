@@ -7862,14 +7862,38 @@ header .arrow {
 footer {
   background: #2c3e50;
 }
+section {
+  /* By default, each panel has a white triangle.
+	 	Each section file must overwrite the color by it bg color.
+	 */
+}
 section .wrapper {
-  padding: 2em 1em;
+  padding: 3em 1em;
   margin: 0 auto;
   max-width: 1024px;
 }
 section .section-title {
   text-align: center;
   padding-bottom: 1.5em;
+}
+section:after {
+  border-top: 2em solid white;
+  border-left: 2em solid transparent;
+  border-right: 2em solid transparent;
+  content: "";
+  display: inline-block;
+  left: 50%;
+  margin-left: -2em;
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+}
+#features::after {
+  border-top: 2em solid #ecf0f1;
+}
+.three-col-features {
+  background: #ecf0f1;
 }
 .three-col-features ._box {
   border: 1px solid #cccccc;
@@ -7881,6 +7905,9 @@ section .section-title {
   padding: .3em;
   font-size: 5em;
 }
+#responsive-features::after {
+  border-top: 2em solid #3498db;
+}
 .title-image-text {
   background: #3498db;
 }
@@ -7888,12 +7915,18 @@ section .section-title {
 .title-image-text p {
   color: #ecf0f1;
 }
+#description::after {
+  border-top: 2em solid #2980b9;
+}
 .title-text {
   background: #2980b9;
 }
 .title-text h2,
 .title-text p {
   color: #ecf0f1;
+}
+#video-bg::after {
+  border-top: 2em solid #2ecc71;
 }
 .videoBG-text {
   background: #2ecc71;
