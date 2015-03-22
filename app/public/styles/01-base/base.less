@@ -10,7 +10,15 @@ a {
 	text-decoration: none;
 
 	&.is-external {
-		color: green;
+		&:after {
+		   content: '\f08e';
+		   font-family: FontAwesome;
+		   font-weight: normal;
+		   font-style: normal;
+		   margin:0px 0px 0px 8px;
+		   text-decoration:none;
+
+		}
 	}
 }
 
@@ -22,6 +30,11 @@ body {
 
 div, section {
 	box-sizing: border-box;
+}
+
+h2 {
+	font-size: 3em;
+	letter-spacing: 2px;
 }
 
 h3 {

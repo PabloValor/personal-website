@@ -76,7 +76,7 @@ gulp.task('javascript', function(){
 		gutil.log(gutil.colors.bgGreen.bold('Javascript ready!'));
 });
 
-/* 	Jshint task	*/
+/* 	Jslint task	*/
 gulp.task('lint', function() {
   return gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'main.js'])
 	    .pipe(jshint())
