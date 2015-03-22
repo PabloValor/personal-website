@@ -16,10 +16,25 @@ header {
 	}
 
 	.arrow {
+		animation-name: upAndDown;
+		animation-duration: 1s;
+		animation-direction: alternate;
+		animation-timing-function: ease-out;
+ 		animation-fill-mode: forwards;
+ 		animation-iteration-count: infinite;
 		color: white;
-		font-size: 3em;
+		font-size: 4em;
 		position: absolute;
 		left: 50%;
 		bottom: .1em;
+	}
+}
+
+@keyframes upAndDown {
+	0% {
+		margin-bottom: 0
+	}
+	100% {
+		margin-bottom: .4em;
 	}
 }
