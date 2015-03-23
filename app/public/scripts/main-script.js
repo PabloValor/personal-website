@@ -1079,6 +1079,11 @@ function onYouTubePlayerAPIReady() {
 
 
 })(jQuery, ytp);
+//preload
+$(window).on('load', function(){
+	$('#preload').fadeOut(1500);
+});
+
 $(document).on('ready', function() {
 	"use strict";
 		
