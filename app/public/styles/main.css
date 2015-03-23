@@ -7914,19 +7914,24 @@ section:after {
   background: #ecf0f1;
 }
 .three-col-features ._box {
+  background: white;
   border: 1px solid #cccccc;
   border-bottom-width: .2em;
   border-radius: .5em;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-color: #9d9d9d;
-  margin: 0 .5em .5em;
+  margin: 0 .5em 1em;
   padding: 0 1em;
+}
+.three-col-features ._box ._body {
+  color: #9d9d9d;
 }
 .three-col-features ._box ._body ._img i {
   border-radius: 100%;
-  padding: .3em;
-  font-size: 5em;
+  color: white;
+  padding: 1em;
+  font-size: 2em;
 }
 #responsive-devices::after {
   border-top: 2em solid #3498db;
