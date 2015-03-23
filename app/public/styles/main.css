@@ -7783,7 +7783,15 @@ a.is-external:after {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
-  margin: 0px 0px 0px 8px;
+  margin-left: .4em;
+  text-decoration: none;
+}
+a.pdf:after {
+  content: '\f1c1';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  margin-left: .4em;
   text-decoration: none;
 }
 body {
@@ -7949,23 +7957,45 @@ section:after {
   color: #ecf0f1;
 }
 #video-bg::after {
-  border-top: 2em solid #2ecc71;
+  border-top: 2em solid transparent;
+}
+#video-bg {
+  height: 600px;
 }
 .videoBG-text {
-  background: #2ecc71;
+  background: #34495e;
+  color: #ecf0f1;
+  font-size: 2em;
+  text-align: center;
+  /*.player {
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 500;
+    }*/
 }
 .videoBG-text h2,
-.videoBG-text p {
+.videoBG-text p,
+.videoBG-text a {
   color: #ecf0f1;
 }
-.videoBG-text .player {
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 500;
+.videoBG-text ._hire ._button {
+  display: inline-block;
+  border: 1px solid #ecf0f1;
+  font-weight: 100;
+  letter-spacing: .1em;
+  padding: 1em;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+.videoBG-text ._hire ._button:hover {
+  background: #f1c40f;
+  border-color: #f1c40f;
 }
 .util-content-center {
   text-align: center;

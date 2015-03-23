@@ -1,16 +1,41 @@
 @import '../01-base/variables.less';
 
+
 #video-bg::after {
-	border-top: 2em solid @esmerald;
+	border-top: 2em solid transparent;
+}
+
+#video-bg {
+	height: 600px;
 }
 .videoBG-text {
-	background: @esmerald;
+	background: @wet-asphalt;
+	color: @clouds;
+	font-size: 2em;
+	text-align: center;
 
-	h2, p {
+	h2, p, a{
 		color: @clouds;
 	}
 
-    .player {
+	._hire{
+		
+		._button {
+			display: inline-block;
+			border: 1px solid @clouds;
+			font-weight: 100;
+			letter-spacing: .1em;
+			padding: 1em;
+			transition: .3s;
+			
+			&:hover {
+				background: @sun-flower;
+				border-color: @sun-flower;
+			}
+		}
+	}
+
+    /*.player {
 		height: 100%;
 		left: 0;
 		opacity: 0;
@@ -18,5 +43,5 @@
 		top: 0;
 		width: 100%;
 		z-index: 500;
-    }
+    }*/
 }

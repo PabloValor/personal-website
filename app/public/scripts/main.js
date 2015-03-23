@@ -17,7 +17,7 @@ $(document).on('ready', function() {
 		}, 1500);
 	});
 
-	//video bg
+	//Initialize video bg
 	$('.player').mb_YTPlayer();
 
 	
