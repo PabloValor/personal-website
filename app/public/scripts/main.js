@@ -25,6 +25,11 @@ $(document).on('ready', function() {
 	//Initialize video bg
 	$('.player').mb_YTPlayer();
 
+	//Initialize Tipr tooltip
+	$('.tip').tipr({
+		'mode': 'top'
+	});
+
 	
 
 	console.log('ready :)');	

@@ -1079,6 +1079,57 @@ function onYouTubePlayerAPIReady() {
 
 
 })(jQuery, ytp);
+
+/*
+Tipr 1.1
+Copyright (c) 2015 Tipue
+Tipr is released under the MIT License
+http://www.tipue.com/tipr
+*/
+
+
+(function($) {
+
+     $.fn.tipr = function(options) {
+     
+          var set = $.extend( {
+               
+               'style'        : 'light',
+               'speed'        : 200,
+               'mode'         : 'bottom'
+          
+          }, options);
+
+          return this.each(function() {
+          
+               var tipr_cont = '.tipr_container_' + set.mode;
+
+               $(this).hover(
+                    function ()
+                    {
+                         var out = '<div class="tipr_container_' + set.mode + '"><div class="tipr_point_' + set.mode + '_' + set.style + '"><div class="tipr_content_' + set.style + '">' + $(this).attr('data-tip') + '</div></div></div>';
+                         
+                         $(this).append(out);
+                    
+                         var w_t = $(tipr_cont).outerWidth();
+                         var w_e = $(this).width();
+                         var m_l = (w_e / 2) - (w_t / 2);
+                    
+                         $(tipr_cont).css('margin-left', m_l + 'px');
+                         $(this).removeAttr('title');
+                         $(tipr_cont).fadeIn(set.speed);              
+                    },
+                    function ()
+                    {   
+                         $(tipr_cont).remove();    
+                    }     
+               );
+                              
+          });
+     };
+     
+})(jQuery);
+
 //preload
 $(window).on('load', function(){
 	$('#preload').fadeOut(1500);
@@ -1105,6 +1156,11 @@ $(document).on('ready', function() {
 
 	//Initialize video bg
 	$('.player').mb_YTPlayer();
+
+	//Initialize Tipr tooltip
+	$('.tip').tipr({
+		'mode': 'top'
+	});
 
 	
 

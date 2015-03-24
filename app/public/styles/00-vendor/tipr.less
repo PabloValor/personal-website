@@ -1,0 +1,126 @@
+
+/*
+Tipr 1.1
+Copyright (c) 2015 Tipue
+Tipr is released under the MIT License
+http://www.tipue.com/tipr
+*/
+
+
+.tipr_content_light
+{
+     font: 13px/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     color: #333; 
+     background-color: #fff;
+     padding: 9px 17px;
+}
+.tipr_content_dark
+{
+     font: 13px/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     color: #fff; 
+     background-color: #3d3d3d;
+     padding: 8px 16px;
+}
+.tipr_container_bottom
+{
+     display: none;
+     position: absolute;
+     margin-top: 13px;
+     z-index: 1000;
+}
+.tipr_container_top
+{
+     display: none;
+     position: absolute;
+     margin-top: -75px;
+     z-index: 1000;
+}
+.tipr_point_top_light, .tipr_point_bottom_light 
+{
+     position: relative;
+	background: #fff;
+	border: 1px solid #dcdcdc;
+}
+.tipr_point_top_dark, .tipr_point_bottom_dark 
+{
+     position: relative;
+	background: #3d3d3d;
+	border: 1px solid #3d3d3d;
+	border-radius: 1px;
+}
+.tipr_point_top_light:after, .tipr_point_top_light:before, .tipr_point_top_dark:after, .tipr_point_top_dark:before
+{
+	position: absolute;
+	pointer-events: none;
+	border: solid transparent;
+	top: 100%;
+	content: "";
+	height: 0;
+	width: 0;
+}
+.tipr_point_top_light:after
+{
+	border-top-color: #fff;
+	border-width: 8px;
+	left: 50%;
+	margin-left: -8px;
+}
+.tipr_point_top_dark:after
+{
+	border-top-color: #3d3d3d;
+	border-width: 8px;
+	left: 50%;
+	margin-left: -8px;
+}
+.tipr_point_top_light:before 
+{
+	border-top-color: #dcdcdc;
+	border-width: 9px;
+	left: 50%;
+	margin-left: -9px;
+}
+.tipr_point_top_dark:before 
+{
+	border-top-color: #3d3d3d;
+	border-width: 9px;
+	left: 50%;
+	margin-left: -9px;
+}
+.tipr_point_bottom_light:after, .tipr_point_bottom_light:before, .tipr_point_bottom_dark:after, .tipr_point_bottom_dark:before
+{
+	position: absolute;
+	pointer-events: none;
+	border: solid transparent;
+	bottom: 100%;
+	content: "";
+	height: 0;
+	width: 0;
+}
+.tipr_point_bottom_light:after
+{
+	border-bottom-color: #fff;
+	border-width: 8px;
+	left: 50%;
+	margin-left: -8px;
+}
+.tipr_point_bottom_dark:after
+{
+	border-bottom-color: #3d3d3d;
+	border-width: 8px;
+	left: 50%;
+	margin-left: -8px;
+}
+.tipr_point_bottom_light:before 
+{
+	border-bottom-color: #dcdcdc;
+	border-width: 9px;
+	left: 50%;
+	margin-left: -9px;
+}
+.tipr_point_bottom_dark:before 
+{
+	border-bottom-color: #3d3d3d;
+	border-width: 9px;
+	left: 50%;
+	margin-left: -9px;
+}
