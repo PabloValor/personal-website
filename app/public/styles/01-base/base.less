@@ -53,5 +53,19 @@ section {
 }
 
 ul {
-
+	list-style: none;
+	padding-left: 0;
+	
+	li {
+		margin-bottom: .2em;
+		&:before {
+		content: '\f101';
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-size: .7em;
+		font-style: normal;
+		margin-right: .4em;
+		text-decoration:none;
+		}
+	}
 }

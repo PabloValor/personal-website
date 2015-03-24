@@ -2,4 +2,76 @@
 
 footer {
 	background: @midnight-blue;
+	color: @clouds;
+	.wrapper {
+		padding: 3em 1em .4em;
+		margin: 0 auto;
+		max-width: 1024px;
+	}	
+	._box {
+		padding: .3em .4em;
+
+		.social-icon {
+			display: inline-block;
+			border-radius: 100%;
+			margin-left: .4em;
+			a {
+				color: @clouds;
+			}
+			i {
+				font-size: .8em;
+				padding: .7em;
+			}
+			&._facebook {
+				background: @color-facebook;
+				&:hover {
+					background: softlight(@color-facebook, #fff);
+				}
+			}
+			&._twitter {
+				background: @color-twitter;
+				&:hover {
+					background: softlight(@color-twitter, #fff);
+				}				
+			}
+			&._skype {
+				background: @color-skype;
+				&:hover {
+					background: softlight(@color-skype, #fff);
+				}				
+			}
+			&._linkedin {
+				background: @color-linkedin;
+				&:hover {
+					background: softlight(@color-linkedin, #fff);
+				}				
+			}
+			&._googleplus {
+				background: @color-googleplus;
+				&:hover {
+					background: softlight(@color-googleplus, #fff);
+				}				
+			}
+		}
+	}
+
+	._love {
+		background: #08131D;
+		p {
+			color: @color-gray-3;
+			font-size: .6em;
+			margin-bottom: 0;
+			padding: .6em 0;
+
+			i {
+				margin-left: .2em;
+				margin-right: .5em;
+				color: red;
+			}
+		}
+	}
+
+	.util-horizontal-line {
+		background: @color-gray-3;
+	}
 }

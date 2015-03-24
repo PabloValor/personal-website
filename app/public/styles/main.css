@@ -7641,6 +7641,7 @@ Copyright (c) 2015 Daniel Eden
 
 */
 /* 	pallete from http://flatuicolors.com/	*/
+/* 	 Social Networks colors	*/
 /* 		Utilities Classes 	*/
 .bg-turquoise {
   background: #1abc9c;
@@ -7814,6 +7815,22 @@ h3 {
 section {
   position: relative;
 }
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  margin-bottom: .2em;
+}
+ul li:before {
+  content: '\f101';
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: .7em;
+  font-style: normal;
+  margin-right: .4em;
+  text-decoration: none;
+}
 header {
   background-image: url('../../images/bg-header.jpg');
   background-repeat: no-repeat;
@@ -7879,9 +7896,77 @@ header .arrow {
 }
 footer {
   background: #2c3e50;
+  color: #ecf0f1;
+}
+footer .wrapper {
+  padding: 3em 1em .4em;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+footer ._box {
+  padding: .3em .4em;
+}
+footer ._box .social-icon {
+  display: inline-block;
+  border-radius: 100%;
+  margin-left: .4em;
+}
+footer ._box .social-icon a {
+  color: #ecf0f1;
+}
+footer ._box .social-icon i {
+  font-size: .8em;
+  padding: .7em;
+}
+footer ._box .social-icon._facebook {
+  background: #3b5998;
+}
+footer ._box .social-icon._facebook:hover {
+  background: #7b97c5;
+}
+footer ._box .social-icon._twitter {
+  background: #33ccff;
+}
+footer ._box .social-icon._twitter:hover {
+  background: #72e4ff;
+}
+footer ._box .social-icon._skype {
+  background: #12a5f4;
+}
+footer ._box .social-icon._skype:hover {
+  background: #3acdf9;
+}
+footer ._box .social-icon._linkedin {
+  background: #4875b4;
+}
+footer ._box .social-icon._linkedin:hover {
+  background: #87add6;
+}
+footer ._box .social-icon._googleplus {
+  background: #c63d2d;
+}
+footer ._box .social-icon._googleplus:hover {
+  background: #e17d6b;
+}
+footer ._love {
+  background: #08131D;
+}
+footer ._love p {
+  color: #9d9d9d;
+  font-size: .6em;
+  margin-bottom: 0;
+  padding: .6em 0;
+}
+footer ._love p i {
+  margin-left: .2em;
+  margin-right: .5em;
+  color: red;
+}
+footer .util-horizontal-line {
+  background: #9d9d9d;
 }
 section {
-  /* By default, each panel has a white triangle.
+  /* By default, each Section has a white triangle.
 	 	Each section file must overwrite the color by it bg color.
 	 */
 }
@@ -8033,4 +8118,9 @@ section:after {
 }
 .util-without-margin-top {
   margin-top: 0;
+}
+.util-horizontal-line {
+  height: 1px;
+  display: block;
+  margin: 1em 0;
 }
