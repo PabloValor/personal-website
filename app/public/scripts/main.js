@@ -30,7 +30,15 @@ $(document).on('ready', function() {
 		'mode': 'top'
 	});
 
-	
+	//Initialize Owl Carousel
+	$("#owl-example").owlCarousel({
+		singleItem: true,
+		itemsScaleUp: true,
+		autoPlay: true,
+		stopOnHover: true,
+		paginationSpeed: 300,
+		slideSpeed: 120
+	});
 
 	console.log('ready :)');	
 });

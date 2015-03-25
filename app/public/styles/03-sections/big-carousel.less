@@ -1,0 +1,62 @@
+@import '../01-base/variables.less';
+
+#big-carousel::after {
+	border-top: 2em solid #08131D;
+}
+
+.big-carousel {
+	background: #08131D;
+	font-size: 1.3em;
+	._wrapper {
+		max-width: 100%;
+		margin: 0 auto;
+		//max-height: 500px;
+	}
+
+	._slice-1 {
+		background: @orange;
+		padding: 2em 0;
+		._img-container {
+			padding: 1em;
+			img{ 
+				width: 300px;
+			}
+		}
+
+		._body {
+			padding: 1em;
+			margin-left: 1.5em;
+		}
+	}
+	._slice-2 {
+		background: @nephritis;
+		padding: 2em 0;
+		._img-container {
+			padding: 1em;
+			img{ 
+				width: 300px;
+			}
+		}
+		
+		._body {
+			padding: 1em;
+			margin-left: 1.5em;
+		}		
+	}
+	._slice-3 {
+		background: @alizarin;
+		padding: 2em 0;
+		._img-container {
+			padding: 1em;
+			img{ 
+				width: 300px;
+			}
+		}
+		
+		._body {
+			padding: 1em;
+			margin-left: 1.5em;
+		}
+
+	}
+}
