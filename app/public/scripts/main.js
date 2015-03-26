@@ -22,6 +22,9 @@ $(document).on('ready', function() {
 		}, 1500);
 	});
 
+	//init wow
+	new WOW().init();
+
 	//Initialize video bg
 	$('.player').mb_YTPlayer();
 
