@@ -8278,13 +8278,34 @@ section:after {
 .title-image-text p {
   color: #ecf0f1;
 }
-.title-image-text ._img-container {
-  text-align: center;
-  margin-bottom: 2em;
+.title-image-text ._section-body ._devices-wrapper {
+  position: relative;
+  min-height: 500px;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.title-image-text ._img-container img {
-  width: 100%;
-  max-width: 600px;
+.title-image-text ._section-body ._devices-wrapper ._laptop,
+.title-image-text ._section-body ._devices-wrapper ._tablet,
+.title-image-text ._section-body ._devices-wrapper ._mobile {
+  position: absolute;
+  bottom: 0;
+}
+.title-image-text ._section-body ._devices-wrapper ._laptop img {
+  width: 600px;
+}
+.title-image-text ._section-body ._devices-wrapper ._tablet {
+  right: 0;
+}
+.title-image-text ._section-body ._devices-wrapper ._tablet img {
+  width: 300px;
+  height: 350px;
+}
+.title-image-text ._section-body ._devices-wrapper ._mobile {
+  right: 230px;
+}
+.title-image-text ._section-body ._devices-wrapper ._mobile img {
+  max-width: 250px;
+  height: 210px;
 }
 #description::after {
   border-top: 2em solid #2980b9;

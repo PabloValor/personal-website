@@ -1,5 +1,4 @@
 @import '../01-base/variables.less';
-
 #responsive-devices::after {
 	border-top: 2em solid @peter-river;
 }
@@ -11,12 +10,36 @@
 		color: @clouds;
 	}
 
-	._img-container {
-		text-align: center;
-		margin-bottom: 2em;
-		img {
-			width: 100%;
-			max-width: 600px;
+	._section-body {
+		._devices-wrapper {
+			position: relative;
+			min-height: 500px;
+			max-width: 900px;
+			margin: 0 auto;
+			._laptop, ._tablet, ._mobile {
+				position: absolute;
+				bottom: 0;
+			}
+			._laptop {
+				img {
+					width: 600px;
+				}
+				
+			}
+			._tablet {
+				right: 0;
+				img {
+					width: 300px;
+					height: 350px;
+				}
+			}
+			._mobile {
+				right: 230px;
+				img {
+					max-width: 250px;
+					height: 210px;
+				}
+			}
 		}
 	}
 }
