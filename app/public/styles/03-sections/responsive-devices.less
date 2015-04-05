@@ -1,0 +1,36 @@
+@import '../01-base/variables.less';
+#responsive-devices::after {
+	border-top: 2em solid @peter-river;
+}
+
+.responsive-devices{
+	background: @peter-river;
+
+	h2, p {
+		color: @clouds;
+	}
+	.section-title {
+		padding-bottom: 0;
+	}
+	._laptop {
+		img {
+			max-width: 600px;
+		}
+	}
+	._tablet {
+		//margin-left: -80px;
+		img {
+			max-width: 300px;
+			height: 350px;
+		}
+	}
+	._mobile {
+		padding-top: 140px;
+		position: relative;
+		z-index: 3;
+		img {
+			max-width: 250px;
+			height: 210px;
+		}
+	}
+}
