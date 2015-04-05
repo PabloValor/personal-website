@@ -8,7 +8,10 @@ $(document).on('ready', function() {
 		
 	var $header 		= $('#header'),
 		$arrowHeader 	= $('#arrow'),
-		$sections		= $('section'); 
+		$sections		= $('section'),
+		chartAnimate	= false, //flag used to initialize animation from EastPieChart.js 
+		chartPosition	= $('#skills').offset().top, //get the position of the chart section
+		windowPosition 	= $(window).scrollTop(); //get the position of the window
 
 	//Set $header height related the viewport height
 	$header.height($(window).height());
@@ -42,6 +45,35 @@ $(document).on('ready', function() {
 		paginationSpeed: 300,
 		slideSpeed: 120
 	});
+
+	//Initialize charts
+
+	if(windowPosition + $(window).height() > chartPosition){
+		if(!chartAnimate){
+			//Initialize chart animation
+			initGraphs();
+		}
+	}
+	$(window).on('scroll',function(e){
+		if($(this).scrollTop() > chartPosition){
+			if(!chartAnimate){
+				initGraphs();
+			}
+		}
+	});
+	function initGraphs() {
+		$('.chart').easyPieChart({
+			scaleColor: "#ecf0f1",
+		    lineWidth: 20,
+		    lineCap: 'butt',
+		    barColor: '#1abc9c',
+		    trackColor:	"#ecf0f1",
+		    size: 160,
+			animate: 2000
+    	});
+
+    	chartAnimate = true;
+	}
 
 	console.log('ready :)');	
 });

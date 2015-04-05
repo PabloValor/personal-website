@@ -8401,6 +8401,17 @@ section:after {
   padding: 1em;
   margin-left: 1.5em;
 }
+.skills h2 {
+  text-align: center;
+}
+.skills .chart {
+  padding: 1em 2em;
+  text-align: center;
+}
+.skills .chart span {
+  color: #9d9d9d;
+  font-weight: bold;
+}
 .preload {
   background: white;
   height: 100%;
