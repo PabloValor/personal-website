@@ -3467,6 +3467,7 @@ $(window).on('load', function(){
 	$('#preload').fadeOut(1500);
 });
 
+
 $(document).on('ready', function() {
 	"use strict";
 		
@@ -3532,7 +3533,7 @@ $(document).on('ready', function() {
 		    lineCap: 'butt',
 		    barColor: '#1abc9c',
 		    trackColor:	"#ecf0f1",
-		    size: 160,
+		    size: 110,
 			animate: 2000
     	});
 
