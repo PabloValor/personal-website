@@ -8208,12 +8208,38 @@ footer ._love p {
   padding: .6em 0;
 }
 footer ._love p i {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  color: red;
   margin-left: .2em;
   margin-right: .5em;
-  color: red;
 }
 footer .util-horizontal-line {
   background: #9d9d9d;
+}
+@keyframes pulse {
+  0% {
+    font-size: 1em;
+  }
+  100% {
+    font-size: 2em;
+  }
 }
 section {
   /* By default, each Section has a white triangle.
