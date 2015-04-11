@@ -8114,11 +8114,12 @@ header .arrow {
   -webkit-animation-iteration-count: infinite;
   -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  bottom: .1em;
   color: white;
   font-size: 4em;
+  left: 0;
+  right: 0;
   position: absolute;
-  left: 50%;
-  bottom: .1em;
 }
 @-webkit-keyframes upAndDown {
   0% {
