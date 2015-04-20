@@ -67,7 +67,7 @@ $(document).on('ready', function() {
 			scaleColor: "#ecf0f1",
 		    lineWidth: 20,
 		    lineCap: 'butt',
-		    barColor: '#1abc9c',
+		    barColor: '#2ecc71',
 		    trackColor:	"#ecf0f1",
 		    size: 110,
 			animate: 2000
