@@ -3,6 +3,7 @@ var express				=		require('express'),
 	swig				=		require('swig'),
 	cookieParser		=		require('cookie-parser'),
 	i18n				=		require('i18n-2'),
+	bodyParser			=		require('body-parser');
 	PORT				= 		process.env.PORT || 6060;
 	isProduction		= 		true;
 
@@ -20,6 +21,9 @@ if(!isProduction) {
 	app.set('view cache', false);
 	swig.setDefaults({ cache: false });
 }
+
+/* for parsing application/x-www-form-urlencoded */
+app.use(bodyParser.urlencoded({ extended: true }));
 
 /*	Set static files path	*/
 app.use(express.static(__dirname + '/app/public/'));
@@ -50,6 +54,12 @@ app.get('/', function(req, res){
 			headerQuote: req.i18n.__('headerQuote'),
 			headerText: req.i18n.__('headerText')
 		});
+});
+
+// Request via contact form
+app.post('/', function(req, res){
+	console.log(req.body);
+	res.send(JSON.stringify({ok:"ok"}));
 });
 
 app.listen(PORT, function() {

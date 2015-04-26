@@ -12,7 +12,8 @@ $(document).on('ready', function() {
 		$sections		= $('section'),
 		chartAnimate	= false, //flag used to initialize animation from EastPieChart.js 
 		chartPosition	= $('#skills').offset().top, //get the position of the chart section
-		windowPosition 	= $(window).scrollTop(); //get the position of the window
+		windowPosition 	= $(window).scrollTop(), //get the position of the window
+		$form 			= $('#form form');
 
 	//Set $header height related the viewport height
 	$header.height($(window).height());
@@ -75,6 +76,37 @@ $(document).on('ready', function() {
 
     	chartAnimate = true;
 	}
+
+	//Submit form via ajax
+	$form.on('submit', function(event){
+		var _formData,
+			_$self = $(this);
+
+		event.preventDefault();
+
+		_formData = $(this).serialize();
+
+		$.ajax({
+			type: 'POST',
+			url: _$self.attr('action'),
+			data: _formData,
+			success: function(data) {
+				console.log(data.ok);
+
+				alert("success");
+			},
+			error: function() {
+
+				alert("Error");
+			},
+			complete: function() {
+				$('#name').focus();
+
+				alert("complete");
+			}
+		});
+	});
+
 
 	console.log('ready :)');	
 });

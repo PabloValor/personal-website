@@ -1,0 +1,44 @@
+@import '../01-base/variables.less';
+
+#contact-form::after {
+	border-top: 2em solid @clouds;
+}
+
+.contact-form {
+	background: @clouds;
+	.section-body {
+		form {
+			._control-container {
+				padding-bottom: 1em;
+				input[type="text"], input[type="email"], textarea {
+					line-height: 1.7em; 
+					border: silver 2px solid;
+					padding-left: .1em;
+					width: 100%;
+					transition: .6s;
+					&:focus {
+						border: 2px solid @peter-river;
+					}
+				}
+				textarea {
+					resize: none;
+				}
+				input[type="submit"] {
+					background: @peter-river;
+					border: 1px solid @peter-river;
+					color: white;
+					font-size: 1.2em;
+					letter-spacing: .1em;
+					padding: .5em 3.5em;
+					transition: .5s;
+					&:hover {
+						background: transparent;
+						color: @peter-river;
+						font-weight: bold;
+						outline: none;
+					}
+				}
+			}
+		}
+	}
+}
