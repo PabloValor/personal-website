@@ -3462,6 +3462,42 @@ http://www.tipue.com/tipr
   })();
 
 }).call(this);
+
+
+function initialize() {
+    var myLatLong = new google.maps.LatLng(-34.7089459, -58.5824533);
+    var styles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}];
+
+    var styledMap = new google.maps.StyledMapType(styles, {name: "Styled Map"});   
+
+    var mapOptions = {
+        center: myLatLong,
+        zoom: 13,
+        zoomControl: true,
+        scrollwheel: false,
+        streetViewControl: false,
+        mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+        }   
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    //Associate the styled map with the MapTypeId and set it to display.
+    map.mapTypes.set('map_style', styledMap);
+    map.setMapTypeId('map_style');
+
+    var marker = new google.maps.Marker({
+          position: myLatLong,
+          map: map,
+          title: 'Magic happens here'
+      });    
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+//center map on responsive resize
+/*google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(new google.maps.LatLng(-34.7089459, -58.5824533));
+});*/
+ 
 //preload
 $(window).on('load', function(){
 	$('#preload').fadeOut(1500);
@@ -3476,7 +3512,9 @@ $(document).on('ready', function() {
 		$sections		= $('section'),
 		chartAnimate	= false, //flag used to initialize animation from EastPieChart.js 
 		chartPosition	= $('#skills').offset().top, //get the position of the chart section
-		windowPosition 	= $(window).scrollTop(); //get the position of the window
+		windowPosition 	= $(window).scrollTop(), //get the position of the window
+		$form 			= $('#form form'),
+		$arrow 			= $('#_arrow');
 
 	//Set $header height related the viewport height
 	$header.height($(window).height());
@@ -3531,7 +3569,7 @@ $(document).on('ready', function() {
 			scaleColor: "#ecf0f1",
 		    lineWidth: 20,
 		    lineCap: 'butt',
-		    barColor: '#1abc9c',
+		    barColor: '#2ecc71',
 		    trackColor:	"#ecf0f1",
 		    size: 110,
 			animate: 2000
@@ -3539,6 +3577,39 @@ $(document).on('ready', function() {
 
     	chartAnimate = true;
 	}
+
+	//Submit contact form
+	$form.on('submit', function(event){
+		var $_self = $(this);
+
+		event.preventDefault();
+
+		$.ajax({
+			type: 'POST',
+			url: $_self.attr('action'),
+			data: $_self.serialize(),
+			success: function(data) {
+				console.log(data.ok);
+
+				alert('Success');
+			},
+			error: function() {
+
+				alert('Error');
+			},
+			complete: function() {
+				$('#name').focus();
+
+				alert('Complete');
+			}
+		});
+	});
+
+	//Back to top arrow button
+	$arrow.on('click', function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop : 0},1000);
+	});
 
 	console.log('ready :)');	
 });
