@@ -77,32 +77,29 @@ $(document).on('ready', function() {
     	chartAnimate = true;
 	}
 
-	//Submit form via ajax
+	//Submit contact form
 	$form.on('submit', function(event){
-		var _formData,
-			_$self = $(this);
+		var $_self = $(this);
 
 		event.preventDefault();
 
-		_formData = $(this).serialize();
-
 		$.ajax({
 			type: 'POST',
-			url: _$self.attr('action'),
-			data: _formData,
+			url: $_self.attr('action'),
+			data: $_self.serialize(),
 			success: function(data) {
 				console.log(data.ok);
 
-				alert("success");
+				alert('Success');
 			},
 			error: function() {
 
-				alert("Error");
+				alert('Error');
 			},
 			complete: function() {
 				$('#name').focus();
 
-				alert("complete");
+				alert('Complete');
 			}
 		});
 	});

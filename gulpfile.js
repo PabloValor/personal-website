@@ -65,7 +65,7 @@ gulp.task('less', function() {
 
 /* JS task*/
 gulp.task('javascript', function(){
-	gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'main.js'])
+	gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'google-map-api-v3.js', paths.scripts.src + 'main.js'])
 		.pipe(concat('main-script.js'))
 		.pipe(isProduction ? uglify() : gutil.noop())
 		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
