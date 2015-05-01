@@ -8,7 +8,6 @@ function initialize() {
 
     var mapOptions = {
         center: myLatLong,
-        //center: { lat: -34.7089459, lng: -58.5824533},
         zoom: 13,
         zoomControl: true,
         scrollwheel: false,
@@ -31,7 +30,7 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 //center map on responsive resize
-google.maps.event.addDomListener(window, 'resize', function() {
+/*google.maps.event.addDomListener(window, 'resize', function() {
     map.setCenter(new google.maps.LatLng(-34.7089459, -58.5824533));
-});
+});*/
  
