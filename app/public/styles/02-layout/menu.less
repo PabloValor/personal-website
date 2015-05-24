@@ -1,0 +1,38 @@
+@import '../01-base/variables.less';
+
+nav {
+	background: @clouds;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+	font-size: .8em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	ul {
+		margin: 0 1em;
+		text-align: left;
+		li {
+			border-bottom: 4px solid transparent;
+			display: inline-block;
+			padding: .6em .3em;
+			margin: 0 0 .1em;
+			transition: .3s;
+			a {
+				color: inherit;
+				float: left;
+				img {
+					vertical-align: middle;
+					width: 18px;
+				}
+			}
+			&:before {
+				content: '';
+			}
+			&:hover {
+				border-bottom: 4px solid @peter-river;
+				color: @wet-asphalt;
+			}
+		}
+	}
+}

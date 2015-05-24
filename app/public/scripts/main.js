@@ -14,10 +14,23 @@ $(document).on('ready', function() {
 		chartPosition	= $('#skills').offset().top, //get the position of the chart section
 		windowPosition 	= $(window).scrollTop(), //get the position of the window
 		$form 			= $('#form form'),
-		$arrow 			= $('#_arrow');
+		$arrow 			= $('#_arrow'),
+		$menu 			= $('#menu'),
+		windowHeight	= $(window).height();
 
 	//Set $header height related the viewport height
-	$header.height($(window).height());
+	$header.height(windowHeight);
+
+	//show and stick to top the menu only below the hero
+	$(window).on('scroll', function(e) {
+
+		e.preventDefault();
+		if($(this).scrollTop() < windowHeight) {
+			$menu.removeClass('util-hide-content').fadeOut(500);
+		} else {
+			$menu.addClass('util-hide-content').fadeIn(500);
+		}
+	});
 
 	//arrow header event
 	$arrowHeader.on('click', function(event) {
@@ -64,12 +77,13 @@ $(document).on('ready', function() {
 			}
 		}
 	});
+
 	function initGraphs() {
 		$('.chart').easyPieChart({
 			scaleColor: "#ecf0f1",
 		    lineWidth: 20,
 		    lineCap: 'butt',
-		    barColor: '#2ecc71',
+		    barColor: '#3498db',
 		    trackColor:	"#ecf0f1",
 		    size: 110,
 			animate: 2000
