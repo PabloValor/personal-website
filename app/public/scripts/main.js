@@ -3,10 +3,9 @@ $(window).on('load', function(){
 	$('#preload').fadeOut(1500);
 });
 
-
 $(document).on('ready', function() {
 	"use strict";
-		
+	 
 	var $header 		= $('#header'),
 		$arrowHeader 	= $('#arrow'),
 		$sections		= $('section'),
@@ -15,21 +14,34 @@ $(document).on('ready', function() {
 		windowPosition 	= $(window).scrollTop(), //get the position of the window
 		$form 			= $('#form form'),
 		$arrow 			= $('#_arrow'),
-		$menu 			= $('#menu'),
-		windowHeight	= $(window).height();
+		windowHeight	= $(window).height(),
+    	pull        	= $('#pull'),
+        menu        	= $('nav.clearfix ul'),
+        menuHeight  	= menu.height();
 
 	//Set $header height related the viewport height
 	$header.height(windowHeight);
 
 	//show and stick to top the menu only below the hero
-	$(window).on('scroll', function(e) {
-
-		e.preventDefault();
+	/*	$(window).on('scroll', function(event) {
+		event.preventDefault();
 		if($(this).scrollTop() < windowHeight) {
-			$menu.removeClass('util-hide-content').fadeOut(500);
+			$('nav.clearfix').addClass('util-hide-content').fadeOut(500);
 		} else {
-			$menu.addClass('util-hide-content').fadeIn(500);
+			$('nav.clearfix').removeClass('util-hide-content').fadeIn(500);
 		}
+	});*/
+
+ 
+    $(pull).on('click', function(e) {
+        e.preventDefault();
+        menu.slideToggle();
+    });
+    $(window).resize(function(){
+	    var w = $(window).width();
+	    if(w > 320 && menu.is(':hidden')) {
+	        menu.removeAttr('style');
+	    }
 	});
 
 	//arrow header event

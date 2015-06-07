@@ -56,7 +56,7 @@ gulp.task('less', function() {
         	}
         ))		
 		.pipe(isProduction ? minifyCSS({keepSpecialComments: 0}) : gutil.noop())
-		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
+		.pipe(isProduction ? rename({basename:'pablovalor', suffix: '.min'}) : gutil.noop())
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(refresh());
 
@@ -65,11 +65,14 @@ gulp.task('less', function() {
 
 /* JS task*/
 gulp.task('javascript', function(){
-	gulp.src([paths.scripts.src + 'vendor/*.js', paths.scripts.src + 'google-map-api-v3.js', paths.scripts.src + 'main.js'])
-		.pipe(concat('main-script.js'))
+	gulp.src([	paths.scripts.src + 'vendor/*.js',
+				paths.scripts.src + 'google-map-api-v3.js',
+			 	paths.scripts.src + 'main.js'
+			 ])
+		.pipe(concat('pablovalor.js'))
 		.pipe(isProduction ? uglify() : gutil.noop())
 		.pipe(isProduction ? rename({suffix: '.min'}) : gutil.noop())
-		.pipe(gulp.dest(paths.scripts.dest))
+		.pipe(gulp.dest(paths.scripts.dest + '/dist'))
 		.on('error',gutil.log)
 		.pipe(refresh());
 
